@@ -21,6 +21,6 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo "Logging in to Docker Hub..."
-          docker login -u $secrets.DOCKER_USERNAME -p $secrets.DOCKER_PASSWORD
+          docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
           echo "Successfully logged in to Docker Hub."
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
