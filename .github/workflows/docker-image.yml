@@ -26,5 +26,7 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USER }}
         run: |
-          docker build -t $DOCKER_USERNAME/graphql-actions:0.0.2 .
-          docker push $DOCKER_USERNAME/graphql-actions:0.0.2
+          docker build -t $DOCKER_USERNAME/graphql-actions:0.0.3 .
+          docker build -t $DOCKER_USERNAME/graphql-actions:latest .
+          docker push $DOCKER_USERNAME/graphql-actions:0.0.3
+          docker push $DOCKER_USERNAME/graphql-actions:latest
